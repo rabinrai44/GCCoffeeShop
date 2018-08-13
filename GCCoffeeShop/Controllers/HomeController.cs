@@ -35,13 +35,13 @@ namespace GCCoffeeShop.Controllers
         }
 
         [HttpPost]
-        public ActionResult Register(Register user)
+        public ActionResult Register(UserModel user)
         {
             return RedirectToAction("Welcome", user);
 
         }
 
-        public ActionResult Welcome(Register user)
+        public ActionResult Welcome(UserModel user)
         {
             return View(user);
         }
