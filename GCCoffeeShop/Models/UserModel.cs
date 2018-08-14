@@ -23,7 +23,7 @@ namespace GCCoffeeShop.Models
         public DateTime DOB { get; set; }
 
         [Required(ErrorMessage = "Email Required")]
-        [DataType(DataType.EmailAddress)]
+        [EmailAddress]
         public string Email { get; set; }
         
         [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid Phone Number")]
