@@ -16,14 +16,14 @@ namespace GCCoffeeShop.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            //ViewBag.Message = "";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Feel free to contact us with the following contact list and we'd love to any feedback.";
 
             return View();
         }
