@@ -43,6 +43,27 @@ namespace GCCoffeeShop.Controllers
 
         public ActionResult Welcome(UserModel user)
         {
+            // Cookie Testing
+            HttpCookie cookie;
+            if (Request.Cookies["First Name"] == null)
+            {
+                cookie = new HttpCookie("First Name")
+                {
+                    Value = user.FirstName,
+
+                    Expires = DateTime.UtcNow.AddDays(30)
+                };
+            }
+            else
+            {
+                cookie = Request.Cookies["First Name"];
+            }
+            // Fetch the info from the cookie
+
+            cookie.Value = user.FirstName;
+            Response.Cookies.Add(cookie); // send the cookie back to the client 
+            ViewBag.Message = user.FirstName;
+            
             return View(user);
         }
     }
