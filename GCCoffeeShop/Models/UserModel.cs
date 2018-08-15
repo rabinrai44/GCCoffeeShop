@@ -25,10 +25,33 @@ namespace GCCoffeeShop.Models
         [Required(ErrorMessage = "Email Required")]
         [EmailAddress]
         public string Email { get; set; }
-        
+
+        [Required(ErrorMessage = "Username is Required")]
+        [Display(Name = "Username")]
+        [StringLength(50, MinimumLength = 5, ErrorMessage = "Username must be between 5 to 50 characters long")]
+        public string UserName { get; set; }
+
+        [Required(ErrorMessage = "Password Required")]
+        [StringLength(255, MinimumLength = 5, ErrorMessage = "Password must be between 5 to 255 characters long")]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
+
+        [Required(ErrorMessage = "Confirm Password Required")]
+        [Display(Name = "Confirm")]
+        [StringLength(255, MinimumLength = 5, ErrorMessage = "Confirm password must be between 5 to 255 characters long")]
+        [DataType(DataType.Password)]
+        [Compare("Password")]
+        public string ConfirmPassword { get; set; }
+
         [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid Phone Number")]
         public string Phone { get; set; }
 
+        
         public string Country { get; set; }
+
+        [Display(Name = "State/Region")]
+        public string StateRegion { get; set; }
+
+
     }
 }

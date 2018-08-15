@@ -5,63 +5,91 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<div class="row">
+    <div class="mx-auto col-sm-8">
+        <h4>Hello @Model.FirstName @Model.LastName</h4>
 
-<div>
-    <h4>Hello @Model.FirstName</h4>
-    @*<hr />
         <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.FirstName)
-            </dt>
+            <h4 class="mb-5 text-success">Congratulation! Your account has been created.</h4>
+            <div class="form-group row">
 
-            <dd>
-                @Html.DisplayFor(model => model.FirstName)
-            </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.LastName)
-            </dt>
+                <dd class="col-sm-5 mr-auto">
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
+            </div>
+            <div class="form-group row">
 
-            <dd>
-                @Html.DisplayFor(model => model.LastName)
-            </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.LastName)
+                </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.DOB)
-            </dt>
+                <dd class="col-sm-5 mr-auto">
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
+            </div>
+            <div class="form-group row">
 
-            <dd>
-                @Html.DisplayFor(model => model.DOB)
-            </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.DOB)
+                </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Email)
-            </dt>
+                <dd class="col-sm-5 mr-auto">
+                    @Html.DisplayFor(model => model.DOB)
+                </dd>
+            </div>
 
-            <dd>
-                @Html.DisplayFor(model => model.Email)
-            </dd>
+            <div class="form-group row">
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Phone)
-            </dt>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Phone)
-            </dd>
+                <dd class="col-sm-5 mr-auto">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+            </div>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Country)
-            </dt>
+            <div class="form-group row">
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.UserName)
+                </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Country)
-            </dd>
+                <dd class="col-sm-5 mr-auto">
+                    @Html.DisplayFor(model => model.UserName)
+                </dd>
+            </div>            
+
+            <div class="form-group row">
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Phone)
+                </dt>
+
+                <dd class="col-sm-5 mr-auto">
+                    @Html.DisplayFor(model => model.Phone)
+                </dd>
+            </div>
+
+            <div class="form-group row">
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Country)
+                </dt>
+
+                <dd class="col-sm-5 mr-auto">
+                    @Html.DisplayFor(model => model.Country)
+                </dd>
+            </div>
 
         </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
-        *@
+            </div>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
+
