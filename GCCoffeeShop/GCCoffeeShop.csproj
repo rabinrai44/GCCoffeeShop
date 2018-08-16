@@ -152,6 +152,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\UserModel.cs" />
+    <Compile Include="ProductList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -197,6 +198,11 @@
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\AddUser.cshtml" />
     <Content Include="Views\Home\Welcome.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Product\Details.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
+    <Content Include="Views\Product\Cart.cshtml" />
+    <Content Include="Views\Home\Product.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -52,6 +52,21 @@ namespace GCCoffeeShop.Models
         [Display(Name = "State/Region")]
         public string StateRegion { get; set; }
 
+        [Display(Name = "Favorite Coffee")]
+        public string FavoriteCoffee { get; set; }
+
+        public List<UserModel> coffeeList = new List<UserModel>();
+
+        public List<UserModel> ReturnCoffee()
+        {
+            coffeeList.Add(new UserModel() { FavoriteCoffee = "Coffee 1"});
+            coffeeList.Add(new UserModel() { FavoriteCoffee = "Coffee 2" });
+            coffeeList.Add(new UserModel() { FavoriteCoffee = "Coffee 2" });
+            coffeeList.Add(new UserModel() { FavoriteCoffee = "Coffee 2" });
+
+            return coffeeList;
+        }
+
 
     }
 }

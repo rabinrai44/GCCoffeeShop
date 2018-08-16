@@ -1,0 +1,17 @@
+﻿@model GCCoffeeShop.Models.UserModel
+<h1>Your Favorite Coffee</h1>
+
+<div class="form-group row">
+    <div class="col-md-4">
+        <label>Item Name: </label>
+       @Html.DisplayFor(model => model.FavoriteCoffee)
+    </div>
+    <div class="col-md-4">
+        <label>Quantity</label>
+        1
+    </div>
+    <div class="col-md-4">
+        <label>Price</label>
+        <span>$2.99</span>
+    </div>
+</div>

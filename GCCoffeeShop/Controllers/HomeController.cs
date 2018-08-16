@@ -43,28 +43,37 @@ namespace GCCoffeeShop.Controllers
 
         public ActionResult Welcome(UserModel user)
         {
-            // Cookie Testing
-            HttpCookie cookie;
-            if (Request.Cookies["First Name"] == null)
+            // Creating Cookie
+            HttpCookie coffeeCookie;
+            if (Request.Cookies["Favorite Coffee"] == null)
             {
-                cookie = new HttpCookie("First Name")
+                coffeeCookie = new HttpCookie("Favorite Coffee")
                 {
-                    Value = user.FirstName,
-
-                    Expires = DateTime.UtcNow.AddDays(30)
+                    Value = user.FavoriteCoffee,
+                    Expires = DateTime.UtcNow.AddDays(60)
                 };
             }
             else
             {
-                cookie = Request.Cookies["First Name"];
+                coffeeCookie = Request.Cookies["Favorite Coffee"];
             }
             // Fetch the info from the cookie
+            coffeeCookie.Value = user.FavoriteCoffee;
+            Response.Cookies.Add(coffeeCookie);
+            ViewBag.Message = user.FavoriteCoffee;
 
-            cookie.Value = user.FirstName;
-            Response.Cookies.Add(cookie); // send the cookie back to the client 
-            ViewBag.Message = user.FirstName;
-            
             return View(user);
+        }
+
+        public ActionResult Product(UserModel user)
+        {
+            HttpCookie getCoffee = HttpContext.Request.Cookies.Get("Favorite Coffee");
+
+            user.FavoriteCoffee = getCoffee.Value;
+
+            ViewBag.Message = getCoffee.Value;
+
+           return View();
         }
     }
 }
