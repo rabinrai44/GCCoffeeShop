@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCCoffeeShop", "GCCoffeeShop\GCCoffeeShop.csproj", "{0041E6D5-2533-439F-B192-92500C59ECA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCCoffeeShop.Data", "GCCoffeeShop.Data\GCCoffeeShop.Data.csproj", "{EBA0325A-C5FD-42F1-A545-7A2FDBC6B8B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCCoffeeShop.Domain", "GCCoffeeShop.Domain\GCCoffeeShop.Domain.csproj", "{3F918871-6AB4-4738-865C-ECECA1121211}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{0041E6D5-2533-439F-B192-92500C59ECA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0041E6D5-2533-439F-B192-92500C59ECA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0041E6D5-2533-439F-B192-92500C59ECA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBA0325A-C5FD-42F1-A545-7A2FDBC6B8B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBA0325A-C5FD-42F1-A545-7A2FDBC6B8B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBA0325A-C5FD-42F1-A545-7A2FDBC6B8B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBA0325A-C5FD-42F1-A545-7A2FDBC6B8B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F918871-6AB4-4738-865C-ECECA1121211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F918871-6AB4-4738-865C-ECECA1121211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F918871-6AB4-4738-865C-ECECA1121211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F918871-6AB4-4738-865C-ECECA1121211}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

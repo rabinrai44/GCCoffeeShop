@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace GCCoffeeShop.Models
+namespace GCCoffeeShop.Domain.Models
 {
-    public class UserModel
+    public class Person
     {
-        [Required(ErrorMessage = "First Name Required")]
+        public int Id { get; set; }
+        [Required]
+        //[Required(ErrorMessage = "First Name Required")]
         [Display(Name = "First Name")]
         [StringLength(30, MinimumLength = 3)]
         public string FirstName { get; set; }
@@ -46,27 +49,19 @@ namespace GCCoffeeShop.Models
         [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid Phone Number")]
         public string Phone { get; set; }
 
-        
+
         public string Country { get; set; }
 
         [Display(Name = "State/Region")]
         public string StateRegion { get; set; }
 
+        public string City { get; set; }
+
+        [Display(Name = "Zip Code")]
+        public string ZipCode { get; set; }
+
+
         [Display(Name = "Favorite Coffee")]
-        public string FavoriteCoffee { get; set; }
-
-        public List<UserModel> coffeeList = new List<UserModel>();
-
-        public List<UserModel> ReturnCoffee()
-        {
-            coffeeList.Add(new UserModel() { FavoriteCoffee = "Coffee 1"});
-            coffeeList.Add(new UserModel() { FavoriteCoffee = "Coffee 2" });
-            coffeeList.Add(new UserModel() { FavoriteCoffee = "Coffee 2" });
-            coffeeList.Add(new UserModel() { FavoriteCoffee = "Coffee 2" });
-
-            return coffeeList;
-        }
-
-
+        public string FavoriteCoffee { get; set; }        
     }
 }
